@@ -1,0 +1,47 @@
+.head {
+	background: #08c2c2;
+    padding: 17px;
+    position: relative;
+    top: -8px;
+    color: white;
+}
+.h-text {
+	font-size: 20px;
+    opacity: 0.8;
+}
+.width-100 {
+	width: 100%;
+}
+.main {
+	padding: 10px;
+}
+.sidenav {
+	padding: 5px;
+}
+.d-c {
+	background: #e0f7fa;
+}
+.h-d {
+	padding: 9px;
+    background: cyan;
+    width: 100%;
+}
+md-card {
+	padding: 1px !important;
+}
+.con-btn {
+	text-align: left;
+    padding: 6px;
+    width: 100%;
+}
+.fx-pos {
+	position: absolute;
+    top: 90%;
+    left: 41%;
+}
+.con-pg {
+    /*overflow-y: auto;*/
+}
+.bgcolor {
+    background-color: #2e3e4e;
+}
