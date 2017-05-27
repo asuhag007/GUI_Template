@@ -1,5 +1,5 @@
 .head {
-	background: #08c2c2;
+	background: #26dcef;
     padding: 17px;
     position: relative;
     top: -8px;
@@ -44,4 +44,9 @@ md-card {
 }
 .bgcolor {
     background-color: #2e3e4e;
+}
+.f-p {
+    background-color: #dc6b6b;
+    float: right;
+    margin-right: 23px;
 }

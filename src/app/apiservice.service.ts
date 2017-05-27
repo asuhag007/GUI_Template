@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Variable } from './mock-data';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -23,12 +22,19 @@ export class ApiserviceService {
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json() || 'Server error'));
     }
-    // getVars(): Observable <any> {
-    //     return this.http.get('http://localhost:8080/' + 'emailVar', this.options)
-    //         .map((res: Response) => res.json())
-    //         .catch((error: any) => Observable.throw(error.json() || 'Server error'));
-    // }
-    getVars(): Promise < any[] > {
-        return Promise.resolve(Variable);
+    getVars(): Observable <any> {
+        return this.http.get('http://localhost:8080/' + 'emailVar', this.options)
+            .map((res: Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json() || 'Server error'));
+    }
+    getAllTemps(): Observable <any> {
+        return this.http.get('http://localhost:8080/' + 'emailTemp', this.options)
+            .map((res: Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json() || 'Server error'));
+    }
+    sendEmail(body: any): Observable <any> {
+        return this.http.post('http://localhost:8080/' + 'sendmails', body, this.options)
+            .map((res: Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json() || 'Server error'));
     }
 }

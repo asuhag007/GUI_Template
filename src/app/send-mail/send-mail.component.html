@@ -1,0 +1,20 @@
+<div *ngIf="!spin">
+<h1 md-dialog-title class="head">Enter Email Id</h1>
+<form autoComplete="off" #addTemp="ngForm" (ngSubmit)="send(addTemp)">
+
+                <md-input-container class="w-100">
+                    <input mdInput placeholder="Email Id Of Client" autoComplete="off" name="clientEmail" ngModel>
+                </md-input-container>
+
+                <md-select class="pos w-100" placeholder="Select Template" name="selectedTemplate" ngModel>
+                    <md-option *ngFor="let temp of tempList" [value]="temp._id">
+                        {{temp.templateName}}
+                    </md-option>
+                </md-select>
+    <div class="fx-pos">
+        <button md-raised-button (click)="close()">Close</button>
+        <button md-raised-button type="submit" color="accent">Send</button>
+    </div>
+</form>
+</div>
+<md-spinner *ngIf="spin" class="spin"></md-spinner>
